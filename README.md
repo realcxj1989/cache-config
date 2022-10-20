@@ -28,7 +28,7 @@ const cacheConfig = new CacheConfig({
     },
     interval: 60 // seconds
 });
-cacheConfig.init();
+await cacheConfig.init();
 let config = await cacheConfig.getConfig('test'); // undefined
 await cacheConfig.setConfig('test', {a: 1});
 config = await cacheConfig.getConfig('test'); // '{"a": 1}'
